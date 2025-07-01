@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecturas del Leccionario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Lecturas del Leccionario</h1>
+        <div class="navigation">
+            <button id="prev-month">&lt; Mes Anterior</button>
+            <h2 id="month-year"></h2>
+            <button id="next-month">Mes Siguiente &gt;</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="calendar-container">
+            <div class="calendar-header">
+                <div>Dom</div>
+                <div>Lun</div>
+                <div>Mar</div>
+                <div>Mié</div>
+                <div>Jue</div>
+                <div>Vie</div>
+                <div>Sáb</div>
+            </div>
+            <div id="calendar-days"></div>
+        </div>
+
+        <div id="readings-container">
+            <h3>Selecciona un día para ver las lecturas</h3>
+            <div id="readings-content">
+                <!-- Las lecturas se cargarán aquí -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Panel de Administración (oculto por defecto) -->
+    <div id="admin-panel" class="hidden">
+        <hr>
+        <h2>Editar Lecturas del Día: <span id="admin-date"></span></h2>
+        <form id="admin-form">
+            <label for="source-url">URL de la Fuente:</label>
+            <input type="url" id="source-url" placeholder="https://ejemplo.com/lecturas-de-hoy">
+
+            <label for="first-reading">Primera Lectura:</label>
+            <textarea id="first-reading" rows="8"></textarea>
+
+            <label for="psalm">Salmo:</label>
+            <textarea id="psalm" rows="5"></textarea>
+
+            <label for="gospel">Evangelio:</label>
+            <textarea id="gospel" rows="8"></textarea>
+            
+            <button type="submit">Guardar Cambios</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
